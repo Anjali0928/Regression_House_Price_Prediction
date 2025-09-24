@@ -1,1 +1,38 @@
+What is RMSE?
+RMSE tells us how far our model’s predictions are from the actual values, on average.
+It’s the square root of the average squared errors.
+The smaller the RMSE, the better the model fits the data.
+Formula
+RMSE=1n∑i=1n(yi−y^i)2−−−−−−−−−−−−√ 
 
+Where:
+
+yi  = actual value
+y^i  = predicted value
+n  = number of data points
+Why Square the Errors?
+Errors can be positive or negative → squaring makes them all positive.
+Squaring also penalizes large errors more heavily (big mistakes hurt RMSE more).
+Why Take the Square Root?
+Without the root, we get Mean Squared Error (MSE), which is in squared units (not intuitive).
+Taking the square root brings it back to the same units as the target variable.
+Example
+Suppose actual house prices = [200, 220, 250]
+
+Predicted = [210, 215, 240]
+
+Errors = [-10, +5, +10]
+
+Squared Errors = [100, 25, 100]
+
+MSE = (100 + 25 + 100) / 3 = 75
+
+RMSE = √75 ≈ 8.66
+
+This means: on average, predictions are off by ~9 units (in same scale as house prices).
+
+In short:
+
+RMSE = average error size between predictions and actual values.
+Always in the same unit as the target (e.g., dollars, cm, etc.).
+Smaller RMSE = better predictions.
